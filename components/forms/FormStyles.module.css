@@ -1,0 +1,275 @@
+.formWrapper {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.progressTracker {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.stepIndicator {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.stepIndicator.active {
+  background: var(--brand-primary);
+  color: #fff;
+}
+
+.stepLine {
+  height: 2px;
+  flex: 1;
+  max-width: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 1rem;
+}
+
+.stepLine.activeLine {
+  background: var(--brand-primary);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formGroup label,
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.input, .select, .textarea {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 0.8rem 1rem;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--brand-light);
+  box-shadow: 0 0 0 2px rgba(107, 31, 162, 0.2);
+}
+
+.multiSelect {
+  height: 120px;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btnRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btnRow .submitBtn {
+  margin-top: 0;
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .formWrapper {
+    padding: 1.5rem 1.15rem;
+    border-radius: var(--radius-lg);
+  }
+  
+  .progressTracker {
+    margin-bottom: 1.5rem;
+  }
+  
+  .stepIndicator {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.75rem;
+  }
+  
+  .stepLine {
+    margin: 0 0.5rem;
+  }
+  
+  .radioGroup {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .btnRow {
+    flex-direction: column;
+  }
+}
+
+/* Commercial Terms & Readiness Box */
+.commercialTermsBox {
+  background: rgba(20, 8, 40, 0.6);
+  border: 1px solid rgba(192, 126, 240, 0.35);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  backdrop-filter: blur(8px);
+}
+
+.commercialTermsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.commercialTermsBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: rgba(192, 126, 240, 0.15);
+  color: #e0aaff;
+  border: 1px solid rgba(192, 126, 240, 0.3);
+}
+
+.commercialTermsBadgeGreen {
+  background: rgba(34, 211, 160, 0.15);
+  color: #34d399;
+  border-color: rgba(34, 211, 160, 0.35);
+}
+
+.commercialTermsFee {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.commercialTermsDesc {
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 0 0 1rem 0;
+}
+
+.radioGroupVertical {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.commercialRadioLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.commercialRadioLabel:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(192, 126, 240, 0.4);
+}
+
+.commercialRadioLabel input[type="radio"] {
+  margin-top: 3px;
+  accent-color: var(--brand-xlight);
+  cursor: pointer;
+}
+
+.commercialRadioLabel strong {
+  display: block;
+  font-size: 0.85rem;
+  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 2px;
+}
+
+.commercialRadioLabel span {
+  display: block;
+  font-size: 0.76rem;
+  color: #94a3b8;
+  line-height: 1.35;
+}
+
+.thresholdAlert {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.thresholdAlertGreen {
+  background: rgba(34, 211, 160, 0.1);
+  border: 1px solid rgba(34, 211, 160, 0.3);
+  color: #34d399;
+}
+
+.thresholdAlertViolet {
+  background: rgba(155, 61, 216, 0.1);
+  border: 1px solid rgba(192, 126, 240, 0.3);
+  color: #e0aaff;
+}
+

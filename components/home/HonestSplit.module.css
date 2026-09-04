@@ -1,0 +1,63 @@
+.tableContainer {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-xl);
+  padding: 1px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.table th,
+.table td {
+  padding: 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table th {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.table td {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.dotGenerated, .dotComputed, .dotGated {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.dotGenerated { background-color: #10B981; } /* Emerald */
+.dotComputed { background-color: #3B82F6; }  /* Blue */
+.dotGated { background-color: #EF4444; }     /* Red */
+
+.closingLine {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto;
+}

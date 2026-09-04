@@ -1,0 +1,181 @@
+.section {
+  background: radial-gradient(ellipse at 50% 50%, #2D0845 0%, #1A0A2E 40%, #0E0618 100%);
+  position: relative;
+  overflow: clip;
+  max-width: 100vw;
+  padding: 6rem 0;
+}
+
+.bgGlow {
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse, rgba(107,31,162,0.3) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.75rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.isoBadges {
+  display: flex;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.isoBadge {
+  padding: 0.3rem 0.875rem;
+  background: rgba(192,184,216,0.08);
+  border: 1px solid rgba(192,184,216,0.25);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--silver);
+  letter-spacing: 0.04em;
+}
+
+.heading {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  max-width: 800px;
+  line-height: 1.15;
+  color: #F0E8FF;
+}
+
+.desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.dualCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.offerCard {
+  background: rgba(26, 10, 46, 0.65);
+  border: 1px solid rgba(155, 61, 216, 0.3);
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.offerCard:hover {
+  background: rgba(40, 16, 70, 0.8);
+  border-color: rgba(192, 126, 240, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.offerHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.iconPe {
+  color: #F5C842;
+}
+
+.iconAgency {
+  color: #60A5FA;
+}
+
+.iconMulti {
+  color: #22D3A0;
+}
+
+.offerTag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #C07EF0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.offerTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #F0E8FF;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.offerDesc {
+  font-size: 0.92rem;
+  color: #B0A0CC;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.offerMeta {
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 0.85rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #E2D3F5;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.reassuranceNote {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(34, 211, 160, 0.08);
+  border: 1px solid rgba(34, 211, 160, 0.25);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  max-width: 860px;
+  text-align: left;
+  font-size: 0.88rem;
+  color: #D1FAE5;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .dualCards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+  .offerCard {
+    padding: 1.5rem 1.25rem;
+  }
+  .reassuranceNote {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.15rem;
+  }
+}

@@ -1,0 +1,465 @@
+.wrapper {
+  padding-top: 80px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  padding: 5rem 1.5rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 6px 16px;
+  background: rgba(107, 31, 162, 0.15);
+  border: 1px solid rgba(155, 61, 216, 0.35);
+  color: var(--brand-xlight, #C07EF0);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.kickerDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22D3A0;
+  box-shadow: 0 0 8px #22D3A0;
+}
+
+.title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.lead {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  color: var(--text-secondary);
+  max-width: 860px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.75;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.tertiaryLink {
+  color: var(--brand-xlight, #C07EF0);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: all 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.tertiaryLink:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.trustStrip {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* Sections */
+.section {
+  padding: 4.5rem 1.5rem;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: left;
+  max-width: 840px;
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.sectionLead {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* Table */
+.tableContainer {
+  overflow-x: auto;
+  background: rgba(26, 10, 46, 0.5);
+  border: 1px solid rgba(155, 61, 216, 0.25);
+  border-radius: 20px;
+  padding: 1px;
+  margin-bottom: 2rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+.table th,
+.table td {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: top;
+}
+
+.table th {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--brand-xlight, #C07EF0);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(20, 8, 36, 0.9);
+}
+
+.table td {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.table td strong {
+  color: var(--text-primary);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: rgba(155, 61, 216, 0.05);
+}
+
+/* Statement Band */
+.statementBand {
+  background: radial-gradient(ellipse at 50% 50%, rgba(45, 8, 69, 0.8) 0%, rgba(20, 8, 36, 0.95) 100%);
+  border: 1px solid rgba(155, 61, 216, 0.35);
+  border-left: 4px solid var(--brand-light, #9B3DD8);
+  border-radius: 16px;
+  padding: 2rem 2.25rem;
+  margin-top: 2rem;
+}
+
+.statementBand p {
+  font-size: 1.05rem;
+  color: #E2D9F3;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.statementBand strong {
+  color: #fff;
+}
+
+/* 4-Card Failure Grid */
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(26, 10, 46, 0.6);
+  border: 1px solid rgba(155, 61, 216, 0.25);
+  border-radius: 18px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(40, 16, 70, 0.75);
+  border-color: rgba(192, 126, 240, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cardIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(107, 31, 162, 0.2);
+  border: 1px solid rgba(155, 61, 216, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--brand-xlight, #C07EF0);
+}
+
+.cardIconDanger {
+  color: #F87171;
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.cardIconEmerald {
+  color: #22D3A0;
+  background: rgba(34, 211, 160, 0.12);
+  border-color: rgba(34, 211, 160, 0.3);
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Pharma Section */
+.pharmaCard {
+  background: linear-gradient(135deg, rgba(34, 211, 160, 0.06) 0%, rgba(26, 10, 46, 0.8) 100%);
+  border: 1px solid rgba(34, 211, 160, 0.3);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.pharmaTag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(34, 211, 160, 0.15);
+  border: 1px solid rgba(34, 211, 160, 0.35);
+  color: #22D3A0;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.pharmaTitle {
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.pharmaText {
+  font-size: 1.02rem;
+  color: #D1C5E2;
+  line-height: 1.7;
+  max-width: 900px;
+  margin-bottom: 1rem;
+}
+
+.pharmaText:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Lens Box */
+.lensBox {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2.75rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lensHeading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.lensText {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.lensLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--brand-xlight, #C07EF0);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.lensLink:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* Stats Proof */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.statCard {
+  background: rgba(26, 10, 46, 0.6);
+  border: 1px solid rgba(155, 61, 216, 0.25);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.statValue {
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-size: 2.75rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #9B3DD8 0%, #22D3A0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Limits List */
+.limitsBox {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 2.25rem 2rem;
+}
+
+.limitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.limitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.limitIcon {
+  color: #F87171;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Final Offer */
+.offerSection {
+  background: radial-gradient(ellipse at 50% 50%, #2D0845 0%, #1A0A2E 50%, #0E0618 100%);
+  border: 1px solid rgba(155, 61, 216, 0.3);
+  border-radius: 24px;
+  padding: 4rem 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.offerTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #F0E8FF;
+  margin-bottom: 1.25rem;
+}
+
+.offerLead {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.offerConditions {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #22D3A0;
+  margin-bottom: 2.25rem;
+}
+
+.reviewDate {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3.5rem 1rem 2.5rem;
+  }
+  .section {
+    padding: 3rem 1rem;
+  }
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+  .pharmaCard {
+    padding: 2rem 1.5rem;
+  }
+  .offerSection {
+    padding: 3rem 1.5rem;
+  }
+}

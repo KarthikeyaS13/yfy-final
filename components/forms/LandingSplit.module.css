@@ -1,0 +1,100 @@
+.section {
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.leadText {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.checkItem {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.checkIcon {
+  color: var(--brand-light, #C07EF0);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.needBox {
+  padding: 1.5rem;
+  background: rgba(26, 10, 46, 0.4);
+  border-radius: 14px;
+  border: 1px solid rgba(155, 61, 216, 0.2);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.needTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.needDesc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.metaRow {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.metaRow strong {
+  color: #D1B8E8;
+}
+
+@media (max-width: 960px) {
+  .section {
+    padding-top: 100px;
+    padding-bottom: 3.5rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .needBox {
+    padding: 1.25rem;
+  }
+}
