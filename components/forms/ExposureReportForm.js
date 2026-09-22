@@ -415,20 +415,46 @@ export default function ExposureReportForm() {
                       <option value="50+">50+ contractors</option>
                     </select>
                   </div>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="statesOperating">Operating States * (Select all that apply)</label>
-                    <select id="statesOperating" name="statesOperating" multiple required value={formData.statesOperating} onChange={handleChange} className={`${styles.select} ${styles.multiSelect}`}>
-                      <option value="Andhra Pradesh">Andhra Pradesh</option>
-                      <option value="Karnataka">Karnataka</option>
-                      <option value="Maharashtra">Maharashtra</option>
-                      <option value="Tamil Nadu">Tamil Nadu</option>
-                      <option value="Telangana">Telangana</option>
-                      <option value="Gujarat">Gujarat</option>
-                      <option value="Delhi">Delhi</option>
-                      <option value="Rajasthan">Rajasthan</option>
-                      <option value="Uttar Pradesh">Uttar Pradesh</option>
-                      <option value="Other">Other / Multi-State</option>
-                    </select>
+                  <div className={styles.formGroup} style={{ position: 'relative' }}>
+                    <label>Operating States * (Select all that apply)</label>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '4px' }}>
+                      {['Andhra Pradesh', 'Karnataka', 'Maharashtra', 'Tamil Nadu', 'Telangana', 'Gujarat', 'Delhi', 'Rajasthan', 'Uttar Pradesh', 'Other'].map(state => {
+                        const isSelected = formData.statesOperating.includes(state);
+                        return (
+                          <button
+                            key={state}
+                            type="button"
+                            onClick={() => {
+                              const newStates = isSelected 
+                                ? formData.statesOperating.filter(s => s !== state)
+                                : [...formData.statesOperating, state];
+                              setFormData(prev => ({ ...prev, statesOperating: newStates }));
+                            }}
+                            style={{
+                              background: isSelected ? 'rgba(107, 31, 162, 0.4)' : 'rgba(255, 255, 255, 0.05)',
+                              border: `1px solid ${isSelected ? 'var(--brand-xlight)' : 'rgba(255, 255, 255, 0.1)'}`,
+                              color: isSelected ? '#fff' : 'var(--text-secondary)',
+                              padding: '6px 14px',
+                              borderRadius: '99px',
+                              fontSize: '0.85rem',
+                              cursor: 'pointer',
+                              transition: 'all 0.2s ease'
+                            }}
+                          >
+                            {state}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {/* Hidden input to maintain native required validation */}
+                    <input 
+                      type="text" 
+                      required 
+                      value={formData.statesOperating.length > 0 ? 'selected' : ''} 
+                      onChange={() => {}} 
+                      style={{ opacity: 0, position: 'absolute', pointerEvents: 'none', bottom: 0, left: '50%' }} 
+                      tabIndex={-1}
+                    />
                   </div>
                 </div>
 

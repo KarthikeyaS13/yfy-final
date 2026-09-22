@@ -6,6 +6,10 @@ import { Menu, X, ChevronDown, Rocket, ShieldCheck, Users, BarChart3, Presentati
 
 const navLinks = [
   {
+    label: 'Home',
+    href: '/',
+  },
+  {
     label: "Who it's for",
     mega: true,
     cols: [
@@ -158,26 +162,27 @@ function MegaMenuContent({ cols }) {
   }
 
   return (
-    <div className="mega-two-pane" style={{ display: 'flex', width: '700px', minHeight: '320px' }}>
+    <div className="mega-two-pane" style={{ display: 'flex', width: '620px', minHeight: 'auto' }}>
       {/* Left Pane - Tabs */}
-      <div className="mega-left-pane" style={{ width: '250px', borderRight: '1px solid rgba(255,255,255,0.05)', paddingRight: '1rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+      <div className="mega-left-pane" style={{ width: '130px', borderRight: '1px solid rgba(255,255,255,0.05)', paddingRight: '0.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
         {cols.map((col, idx) => (
           <button 
             key={col.title} 
             onClick={() => setActiveIdx(idx)}
             onMouseEnter={() => setActiveIdx(idx)}
             style={{
-              textAlign: 'left',
+              textAlign: 'right',
               background: activeIdx === idx ? 'rgba(107, 31, 162, 0.2)' : 'transparent',
               color: activeIdx === idx ? '#fff' : 'var(--text-secondary)',
               border: 'none',
-              padding: '0.85rem 1rem',
+              padding: '0.85rem 0.5rem',
               borderRadius: '8px',
               cursor: 'pointer',
               fontWeight: 600,
               fontSize: '0.9rem',
               display: 'flex',
-              justifyContent: 'space-between',
+              justifyContent: 'flex-end',
+              gap: '0.5rem',
               alignItems: 'center',
               transition: 'all 0.2s',
               fontFamily: 'inherit'
@@ -190,7 +195,7 @@ function MegaMenuContent({ cols }) {
       </div>
 
       {/* Right Pane - Content */}
-      <div className="mega-right-pane" style={{ flex: 1, paddingLeft: '1.5rem' }}>
+      <div className="mega-right-pane" style={{ flex: 1, paddingLeft: '1rem' }}>
         <div className="col-title" style={{ marginBottom: '1rem', color: 'var(--brand-xlight)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
           {cols[activeIdx].title}
         </div>

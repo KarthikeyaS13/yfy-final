@@ -88,7 +88,7 @@ export default function HeroSection() {
         </h1>
 
         <p className={styles.subheadline}>
-          While conventional HRMS calculate payslips for permanent white-collar staff, yfy eliminates balance-sheet liabilities where 70% of workforce risk lives: contractor invoice overbilling, 36-state jurisdiction rules, and manpower supply operations. <strong>Sits alongside your existing ERP or HRMS — zero rip-and-replace.</strong>
+          While conventional HRMS calculate payslips for permanent white-collar staff, yfy eliminates balance-sheet liabilities where 70% of workforce risk lives: contractor invoice overbilling, 36-state jurisdiction rules, and manpower supply operations. <strong>Sits alongside your existing ERP or HRMS - zero rip-and-replace.</strong>
         </p>
 
         {/* Persona Selector Tabs */}
